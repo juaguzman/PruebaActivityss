@@ -1,6 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/tituloeditable"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="-30dp"
+        />
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/famani"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/ivVisor"
+        android:layout_marginTop="-60dp"
+        />
+
+    <HorizontalScrollView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:scrollbars="none"
+        >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/leonfin"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/ivLeon"
+                android:padding="20dp"/>
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/monofin"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/ivMono"
+                android:padding="20dp"/>
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/osofin"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/ivOso"
+                android:padding="20dp"/>
+
+            <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/perrofin"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/ivPerro"
+            android:padding="20dp"/>
+            <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ranafim"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/ivRana"
+            android:padding="20dp"/>
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/patofin"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/ivPato"
+                android:padding="20dp"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
 
 </LinearLayout>
