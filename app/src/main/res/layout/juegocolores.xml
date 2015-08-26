@@ -64,4 +64,12 @@
         android:layout_alignRight="@+id/ib2_animation"
         android:layout_alignEnd="@+id/ib2_animation" />
 
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/ib4_animation"
+        android:layout_below="@+id/ib1_animacion"
+        android:layout_toLeftOf="@+id/ib3_animation"
+        android:layout_toStartOf="@+id/ib3_animation" />
+
 </RelativeLayout>
