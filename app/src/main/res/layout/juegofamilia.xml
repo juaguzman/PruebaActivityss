@@ -5,6 +5,44 @@
     android:orientation="vertical"
     android:background="@drawable/fodo1">
 
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/tituloeditable"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-30dp"
+        />
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/familia"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/ivVisor"
+            android:layout_marginTop="-60dp"
+        />
+    <HorizontalScrollView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:scrollbars="none"
+        >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/bebefondo"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/ivBebe"
+                android:padding="20dp"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
 
 
 </LinearLayout>

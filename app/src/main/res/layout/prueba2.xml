@@ -20,6 +20,5 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginRight="51dp"
-        android:layout_marginEnd="51dp"
-        android:background="@drawable/fondojuego" />
+        android:layout_marginEnd="51dp" />
 </RelativeLayout>
