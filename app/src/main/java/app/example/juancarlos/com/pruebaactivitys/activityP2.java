@@ -14,12 +14,16 @@ import android.widget.Button;
 public class activityP2  extends AppCompatActivity implements View.OnClickListener
 {
     Button btn1;
+    Button btn2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.prueba2);
         btn1 = (Button) findViewById(R.id.btnJuego);
+        btn1.setOnClickListener(this);
+
+        btn1 = (Button) findViewById(R.id.btnColores);
         btn1.setOnClickListener(this);
     }
 
@@ -33,6 +37,9 @@ public class activityP2  extends AppCompatActivity implements View.OnClickListen
                 Intent in1 = new Intent(activityP2.this,juegofam.class);
                 startActivity(in1);
                 break;
+            case R.id.btnColores:
+                Intent in2 = new Intent(activityP2.this,coloresjuego.class);
+                startActivity(in2);
         }
 
     }

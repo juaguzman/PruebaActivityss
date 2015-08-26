@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:background="@android:color/darker_gray"
+    android:orientation="vertical"
+    >
+
+    <Button
+        android:id="@+id/btn_iniciar_animacion"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/iniciar"/>
+
+    <ImageView
+        android:id="@+id/iv_animacion"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/btn_detener_animacion"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/detener"
+        android:layout_below="@+id/btn_iniciar_animacion"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="46dp" />
+
+    <ImageButton
+        android:id="@+id/ib1_animacion"
+        android:layout_height="100dp"
+        android:layout_width="100dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_below="@+id/btn_iniciar_animacion"
+        android:layout_toRightOf="@+id/iv_animacion"
+        android:layout_marginLeft="31dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="107dp" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/ib2_animation"
+        android:layout_alignTop="@+id/ib1_animacion"
+        android:layout_toRightOf="@+id/ib1_animacion"
+        android:layout_toEndOf="@+id/ib1_animacion" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/ib3_animation"
+        android:layout_below="@+id/ib1_animacion"
+        android:layout_alignRight="@+id/ib2_animation"
+        android:layout_alignEnd="@+id/ib2_animation" />
+
+</RelativeLayout>
