@@ -1,10 +1,5 @@
 package app.example.juancarlos.com.pruebaactivitys;
 
-/**
- * Created by JUANCARLOS on 26/08/2015.
- */
-
-
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -17,8 +12,8 @@ public class coloresjuego extends AppCompatActivity implements View.OnClickListe
 {
     private Button btnIniciar, btnDetener;
     private ImageView ivAnimacion;
-    private ImageButton ibAnim,ibAnm2,ibAnm3;
-    private AnimationDrawable savingAnimation,savingAnimation1,savingAnimation2,savingAnimation3;
+    private ImageButton ibAnim,ibAnm2,ibAnm3,ibAnm4;
+    private AnimationDrawable savingAnimation,savingAnimation1,savingAnimation2,savingAnimation3,savingAnimation4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,9 +45,43 @@ public class coloresjuego extends AppCompatActivity implements View.OnClickListe
         ibAnm3.setBackgroundResource(R.drawable.animacionver);
         savingAnimation3=(AnimationDrawable)ibAnm3.getBackground();
 
+        ibAnm4 = (ImageButton) findViewById(R.id.ib4_animation);
+        ibAnm4.setOnClickListener(this);
+        ibAnm4.setBackgroundResource(R.drawable.animacionama);
+        savingAnimation4=(AnimationDrawable)ibAnm4.getBackground();
+
 
     }
 
+    public int ran()
+    {
+        int num;
+        num=(int)(Math.random()*4+ 1);
+
+        return num;
+    }
+
+    public void girar()
+    {
+        int num=ran();
+        switch (num)
+        {
+            case 1:
+                savingAnimation1.start();
+                break;
+            case 2:
+                savingAnimation2.start();
+                break;
+            case 3:
+                savingAnimation3.start();
+                break;
+            case 4:
+                savingAnimation4.start();
+                break;
+
+
+        }
+    }
 
 
     @Override
@@ -60,21 +89,27 @@ public class coloresjuego extends AppCompatActivity implements View.OnClickListe
         switch(v.getId()){
             case R.id.btn_iniciar_animacion:
                 savingAnimation.start();
-                savingAnimation1.start();
-                savingAnimation2.start();
-                savingAnimation3.start();
+                girar();
                 break;
             case R.id.btn_detener_animacion:
                 savingAnimation.stop();
+                girar();
                 break;
             case R.id.ib1_animacion:
                 savingAnimation1.stop();
+                girar();
                 break;
             case R.id.ib2_animation:
-                savingAnimation1.stop();
+                savingAnimation2.stop();
+                girar();
                 break;
             case R.id.ib3_animation:
                 savingAnimation3.stop();
+                girar();
+                break;
+            case R.id.ib4_animation:
+                savingAnimation4.stop();
+                girar();
                 break;
         }
     }
