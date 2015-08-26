@@ -30,7 +30,7 @@ public class activityP2  extends AppCompatActivity implements View.OnClickListen
         switch (v.getId())
         {
             case R.id.btnJuego:
-                Intent in1 = new Intent(activityP2.this,JuegoActivity.class);
+                Intent in1 = new Intent(activityP2.this,juegofam.class);
                 startActivity(in1);
                 break;
         }
