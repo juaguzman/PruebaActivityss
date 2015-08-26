@@ -39,6 +39,30 @@
                 android:layout_gravity="center_horizontal"
                 android:id="@+id/ivBebe"
                 android:padding="20dp"/>
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/papafondo"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/ivPapa"
+                android:padding="20dp"/>
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/mamafondo"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/ivMama"
+                android:padding="20dp"/>
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/ninofondo"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/ivNino"
+                android:padding="20dp"/>
+
+
 
         </LinearLayout>
 
