@@ -1,18 +1,15 @@
 package app.example.juancarlos.com.pruebaactivitys;
 
-import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 
 
 public class juegofam extends AppCompatActivity  implements OnClickListener{
     ImageView visor, papa, mama, nino,bebe;
-    ImageButton ayuda;
     MediaPlayer mp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +20,7 @@ public class juegofam extends AppCompatActivity  implements OnClickListener{
         mama=(ImageView)findViewById(R.id.ivMama);
         nino=(ImageView)findViewById(R.id.ivNino);
         bebe=(ImageView)findViewById(R.id.ivBebe);
-        ayuda=(ImageButton)findViewById(R.id.ibtnayuda);
+
         mp = MediaPlayer.create(this, R.raw.ranita);
 
 
@@ -31,7 +28,6 @@ public class juegofam extends AppCompatActivity  implements OnClickListener{
         mama.setOnClickListener(this);
         nino.setOnClickListener(this);
         bebe.setOnClickListener(this);
-        ayuda.setOnClickListener(this);
 
 
 
@@ -64,24 +60,45 @@ public class juegofam extends AppCompatActivity  implements OnClickListener{
         switch (v.getId())
         {
             case R.id.ivPapa:
+                if (mp.isPlaying()) {
+                    mp.stop();
+                    mp.release();
+                }
                 visor.setImageResource(R.drawable.papafondo);
                 mp = MediaPlayer.create(this, R.raw.papa);
-                mp.setLooping(true);
-                mp.setVolume(100, 100);
+
                 mp.start();
                 break;
             case R.id.ivMama:
+                if (mp.isPlaying()) {
+                    mp.stop();
+                    mp.release();
+                }
                 visor.setImageResource(R.drawable.mamafondo);
+                mp = MediaPlayer.create(this, R.raw.mama);
+                mp.start();
                 break;
             case R.id.ivNino:
+                if (mp.isPlaying()) {
+                    mp.stop();
+                    mp.release();
+                }
                 visor.setImageResource(R.drawable.ninofondo);
+                mp = MediaPlayer.create(this, R.raw.nino);
+
+                mp.start();
                 break;
             case R.id.ivBebe:
+                if (mp.isPlaying()) {
+                    mp.stop();
+                    mp.release();
+                }
                 visor.setImageResource(R.drawable.bebefondo);
+                mp = MediaPlayer.create(this, R.raw.bebe);
+
+                mp.start();
                 break;
-            case R.id.ibtnayuda:
-                Intent in = new Intent(juegofam.this,inst1.class);
-                startActivity(in);
+
 
         }
 

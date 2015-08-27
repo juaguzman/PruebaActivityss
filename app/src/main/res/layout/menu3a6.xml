@@ -1,35 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@drawable/fondo2">
+    android:background="@drawable/fondo1">
 
     <Button
         android:id="@+id/btnJuegEncuen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="151dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginRight="41dp"
-        android:layout_toLeftOf="@+id/ibtn_color"
-        android:layout_toStartOf="@+id/ibtn_color"
-        android:text="New Button" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="120dp"
+        android:layout_marginLeft="49dp"
+        android:layout_marginStart="49dp" />
 
     <ImageButton
         android:id="@+id/ibtn_color"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_above="@+id/btnJuegEncuen"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginEnd="51dp"
-        android:layout_marginRight="51dp" />
+        android:layout_marginEnd="67dp"
+        android:layout_marginRight="67dp" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="250dp"
-        android:layout_height="150dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/tituloprin" />
 </RelativeLayout>

@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 public class coloresjuego extends AppCompatActivity implements View.OnClickListener
 {
+    MediaPlayer mp1;
     private Button btnIniciar, btnDetener;
     private RelativeLayout rl;
     private ImageButton ibAnim,ibAnm2,ibAnm3,ibAnm4;
@@ -24,7 +25,6 @@ public class coloresjuego extends AppCompatActivity implements View.OnClickListe
     private int cont;
     private String as="Aciertos = ";
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +32,7 @@ public class coloresjuego extends AppCompatActivity implements View.OnClickListe
 
         cont=0;
         mp = MediaPlayer.create(this,R.raw.error);
+        mp1 = MediaPlayer.create(this, R.raw.rojo);
         String font_path = "font/timkid.ttf";
         Typeface TF = Typeface.createFromAsset(getAssets(),font_path);
         txt= (TextView) findViewById(R.id.txtAcierto);
@@ -86,20 +87,35 @@ public class coloresjuego extends AppCompatActivity implements View.OnClickListe
         switch (num)
         {
             case 1:
-
+                if (mp.isPlaying()) {
+                    mp.stop();
+                    mp.release();
+                }
+                mp = MediaPlayer.create(this, R.raw.rojo);
+                mp.start();
                 savingAnimation1.start();
                 rl.setBackgroundColor(Color.parseColor("#FFFF1511"));
 
                 break;
             case 2:
-
+                if (mp.isPlaying()) {
+                    mp.stop();
+                    mp.release();
+                }
+                mp = MediaPlayer.create(this, R.raw.azul);
+                mp.start();
                     savingAnimation2.start();
                     rl.setBackgroundColor(Color.parseColor("#2f2fff"));
 
 
                 break;
             case 3:
-
+                if (mp.isPlaying()) {
+                    mp.stop();
+                    mp.release();
+                }
+                mp = MediaPlayer.create(this, R.raw.verde);
+                mp.start();
                     savingAnimation3.start();
                     rl.setBackgroundColor(Color.parseColor("#FF0FFF0D"));
 
@@ -107,7 +123,12 @@ public class coloresjuego extends AppCompatActivity implements View.OnClickListe
 
                 break;
             case 4:
-
+                if (mp.isPlaying()) {
+                    mp.stop();
+                    mp.release();
+                }
+                mp = MediaPlayer.create(this, R.raw.amarillo);
+                mp.start();
                     savingAnimation4.start();
                     rl.setBackgroundColor(Color.parseColor("#FFABA90E"));
 
