@@ -87,35 +87,38 @@ public class coloresjuego extends AppCompatActivity implements View.OnClickListe
         switch (num)
         {
             case 1:
-                if (mp.isPlaying()) {
-                    mp.stop();
-                    mp.release();
+                if (mp1.isPlaying()) {
+                    mp1.stop();
+                    mp1.release();
                 }
-                mp = MediaPlayer.create(this, R.raw.rojo);
-                mp.start();
+                mp1.release();
+                mp1 = MediaPlayer.create(this, R.raw.rojo);
+                mp1.start();
                 savingAnimation1.start();
                 rl.setBackgroundColor(Color.parseColor("#FFFF1511"));
 
                 break;
             case 2:
-                if (mp.isPlaying()) {
-                    mp.stop();
-                    mp.release();
+                if (mp1.isPlaying()) {
+                    mp1.stop();
+                    mp1.release();
                 }
-                mp = MediaPlayer.create(this, R.raw.azul);
-                mp.start();
+                mp1.release();
+                mp1 = MediaPlayer.create(this, R.raw.azul);
+                mp1.start();
                     savingAnimation2.start();
                     rl.setBackgroundColor(Color.parseColor("#2f2fff"));
 
 
                 break;
             case 3:
-                if (mp.isPlaying()) {
-                    mp.stop();
-                    mp.release();
+                if (mp1.isPlaying()) {
+                    mp1.stop();
+                    mp1.release();
                 }
-                mp = MediaPlayer.create(this, R.raw.verde);
-                mp.start();
+                mp1.release();
+                mp1 = MediaPlayer.create(this, R.raw.verde);
+                mp1.start();
                     savingAnimation3.start();
                     rl.setBackgroundColor(Color.parseColor("#FF0FFF0D"));
 
@@ -123,12 +126,14 @@ public class coloresjuego extends AppCompatActivity implements View.OnClickListe
 
                 break;
             case 4:
-                if (mp.isPlaying()) {
-                    mp.stop();
-                    mp.release();
+                if (mp1.isPlaying()) {
+                    mp1.stop();
+                    mp1.release();
                 }
-                mp = MediaPlayer.create(this, R.raw.amarillo);
-                mp.start();
+                mp1.release();
+                mp1 = MediaPlayer.create(this, R.raw.amarillo);
+                mp1.start();
+
                     savingAnimation4.start();
                     rl.setBackgroundColor(Color.parseColor("#FFABA90E"));
 
