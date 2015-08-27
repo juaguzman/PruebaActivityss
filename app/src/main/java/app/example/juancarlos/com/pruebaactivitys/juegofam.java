@@ -1,7 +1,9 @@
 package app.example.juancarlos.com.pruebaactivitys;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.content.DialogInterface;
 import android.view.View.OnClickListener;
@@ -14,6 +16,7 @@ import android.view.View;
  */
 public class juegofam extends AppCompatActivity  implements OnClickListener{
     ImageView visor, papa, mama, nino,bebe;
+    ImageButton ayuda;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,11 +26,13 @@ public class juegofam extends AppCompatActivity  implements OnClickListener{
         mama=(ImageView)findViewById(R.id.ivMama);
         nino=(ImageView)findViewById(R.id.ivNino);
         bebe=(ImageView)findViewById(R.id.ivBebe);
+        ayuda=(ImageButton)findViewById(R.id.ibtnayuda);
 
         papa.setOnClickListener(this);
         mama.setOnClickListener(this);
         nino.setOnClickListener(this);
         bebe.setOnClickListener(this);
+        ayuda.setOnClickListener(this);
 
     }
 
@@ -48,8 +53,18 @@ public class juegofam extends AppCompatActivity  implements OnClickListener{
             case R.id.ivBebe:
                 visor.setImageResource(R.drawable.bebefondo);
                 break;
+            case R.id.ibtnayuda:
+                Intent in = new Intent(juegofam.this,inst1.class);
+                startActivity(in);
 
         }
 
+
+    }
+
+    public void limpiar()
+    {
+        Runtime basura = Runtime.getRuntime();
+        basura.gc();
     }
 }
