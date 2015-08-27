@@ -9,12 +9,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener{
 
     Button btn;
     Button btn2;
     private MediaPlayer mp;
+    private RelativeLayout rl;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
         btn2.setOnClickListener(this);
         mp = MediaPlayer.create(this, R.raw.pinpong);
         mp.start();
+        rl= (RelativeLayout) findViewById(R.id.fondo1);
     }
 
     @Override
@@ -80,10 +83,13 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
         switch (v.getId())
         {
             case R.id.btn1a3:
+
+                finish();
                 Intent in = new Intent(MainActivity.this, activityP2.class);
                 startActivity(in);
                 break;
             case R.id.btn3a6:
+                finish();
                 Intent in2 = new Intent(MainActivity.this, menu3a6.class);
                 startActivity(in2);
                 break;
