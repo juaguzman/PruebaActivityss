@@ -1,20 +1,17 @@
 package app.example.juancarlos.com.pruebaactivitys;
 
-import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.content.DialogInterface;
-import android.view.View.OnClickListener;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageView;
 
 
 public class juegoanimales extends AppCompatActivity implements OnClickListener
 {
     ImageView visor, leon, perro, rana,pato, mono, oso;
-    MediaPlayer mp,mp1;
+    MediaPlayer mp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +25,7 @@ public class juegoanimales extends AppCompatActivity implements OnClickListener
         mono=(ImageView)findViewById(R.id.ivMono);
         oso=(ImageView)findViewById(R.id.ivOso);
         mp=MediaPlayer.create(this,R.raw.ranita);
-        mp1=MediaPlayer.create(this,R.raw.clasica);
-        mp1.setLooping(true);
-        mp1.start();
+
 
         leon.setOnClickListener(this);
         perro.setOnClickListener(this);
@@ -50,34 +45,23 @@ public class juegoanimales extends AppCompatActivity implements OnClickListener
         {
             mp.stop();
             mp.release();
-            mp1.stop();
-            mp1.release();
+
         }
     }
 
-    @Override
-    protected void onResume()
-    {
-        super.onResume();
-        mp1.start();
-    }
 
     @Override
     protected void onPause()
     {
         super.onPause();
         mp.pause();
-        mp1.pause();
+
     }
 
 
     @Override
     public void onClick(View v)
     {
-        if(mp1.isPlaying())
-        {
-            mp1.stop();
-        }
 
 
         switch (v.getId())

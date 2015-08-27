@@ -2,8 +2,8 @@ package app.example.juancarlos.com.pruebaactivitys;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
 
     Button btn;
     Button btn2;
+    Button btnmAcerca;
     private MediaPlayer mp;
     private RelativeLayout rl;
     @Override
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
         btn.setOnClickListener(this);
         btn2 = (Button) findViewById(R.id.btn3a6);
         btn2.setOnClickListener(this);
+        btnmAcerca = (Button) findViewById(R.id.btnAcerca);
+        btnmAcerca.setOnClickListener(this);
         mp = MediaPlayer.create(this, R.raw.pinpong);
         mp.start();
         rl= (RelativeLayout) findViewById(R.id.fondo1);
@@ -89,6 +92,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
             case R.id.btn3a6:
                 Intent in2 = new Intent(MainActivity.this, menu3a6.class);
                 startActivity(in2);
+                break;
+            case R.id.btnAcerca:
+                Intent in3 = new Intent(MainActivity.this, acercade.class);
+                startActivity(in3);
                 break;
 
         }

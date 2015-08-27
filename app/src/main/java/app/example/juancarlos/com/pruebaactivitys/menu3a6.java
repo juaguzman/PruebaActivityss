@@ -6,7 +6,6 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 public class menu3a6 extends AppCompatActivity implements View.OnClickListener
@@ -14,7 +13,7 @@ public class menu3a6 extends AppCompatActivity implements View.OnClickListener
 
     ImageButton btn1;
     private AnimationDrawable anim1;
-    Button btn2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +26,7 @@ public class menu3a6 extends AppCompatActivity implements View.OnClickListener
         anim1=(AnimationDrawable)btn1.getBackground();
         anim1.start();
 
-        btn2 = (Button) findViewById(R.id.btnJuegEncuen);
-        btn2.setOnClickListener(this);
+
     }
 
     @Override
