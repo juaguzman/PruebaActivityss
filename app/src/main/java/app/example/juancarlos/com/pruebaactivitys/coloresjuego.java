@@ -1,34 +1,54 @@
 package app.example.juancarlos.com.pruebaactivitys;
 
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.AnimationDrawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 public class coloresjuego extends AppCompatActivity implements View.OnClickListener
 {
     private Button btnIniciar, btnDetener;
-    private ImageView ivAnimacion;
+    private RelativeLayout rl;
     private ImageButton ibAnim,ibAnm2,ibAnm3,ibAnm4;
-    private AnimationDrawable savingAnimation,savingAnimation1,savingAnimation2,savingAnimation3,savingAnimation4;
+    private AnimationDrawable savingAnimation1,savingAnimation2,savingAnimation3,savingAnimation4;
+    private MediaPlayer mp;
+    private TextView txt;
+    private int cont;
+    private String as="Aciertos = ";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.juegocolores);
 
+        cont=0;
+        mp = MediaPlayer.create(this,R.raw.error);
+        String font_path = "font/timkid.ttf";
+        Typeface TF = Typeface.createFromAsset(getAssets(),font_path);
+        txt= (TextView) findViewById(R.id.txtAcierto);
+        txt.setTypeface(TF);
+        txt.setTextColor(Color.parseColor("#FF000000"));
+        txt.setText(as + cont);
+
+        rl=(RelativeLayout) findViewById(R.id.fondoColores);
+        rl.setBackgroundColor(Color.parseColor("#2f2fff"));
         btnIniciar = (Button)findViewById(R.id.btn_iniciar_animacion);
         btnDetener = (Button)findViewById(R.id.btn_detener_animacion);
 
         btnIniciar.setOnClickListener(this);
         btnDetener.setOnClickListener(this);
 
-        ivAnimacion = (ImageView)findViewById(R.id.iv_animacion);
-        ivAnimacion.setBackgroundResource(R.drawable.animacion);
-        savingAnimation = (AnimationDrawable)ivAnimacion.getBackground();
+
 
         ibAnim = (ImageButton) findViewById(R.id.ib1_animacion);
         ibAnim.setOnClickListener(this);
@@ -67,18 +87,32 @@ public class coloresjuego extends AppCompatActivity implements View.OnClickListe
         switch (num)
         {
             case 1:
+
                 savingAnimation1.start();
+                rl.setBackgroundColor(Color.parseColor("#FFFF1511"));
+
                 break;
             case 2:
-                savingAnimation2.start();
+
+                    savingAnimation2.start();
+                    rl.setBackgroundColor(Color.parseColor("#2f2fff"));
+
+
                 break;
             case 3:
-                savingAnimation3.start();
+
+                    savingAnimation3.start();
+                    rl.setBackgroundColor(Color.parseColor("#FF0FFF0D"));
+
+
+
                 break;
             case 4:
-                savingAnimation4.start();
-                break;
 
+                    savingAnimation4.start();
+                    rl.setBackgroundColor(Color.parseColor("#FFFFFA3B"));
+
+                break;
 
         }
     }
@@ -86,30 +120,65 @@ public class coloresjuego extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        switch(v.getId()){
+        switch(v.getId())
+        {
             case R.id.btn_iniciar_animacion:
-                savingAnimation.start();
+                btnIniciar.setVisibility(View.INVISIBLE);
                 girar();
                 break;
             case R.id.btn_detener_animacion:
-                savingAnimation.stop();
-                girar();
+                Intent in1 = new Intent(coloresjuego.this,menu3a6.class);
+                startActivity(in1);
+
                 break;
             case R.id.ib1_animacion:
-                savingAnimation1.stop();
-                girar();
+                if(savingAnimation1.isRunning())
+                {
+                   cont ++;
+                    txt.setText(as + cont);
+                    savingAnimation1.stop();
+                    girar();
+
+                }
+                else
+                mp.start();
+
                 break;
             case R.id.ib2_animation:
-                savingAnimation2.stop();
-                girar();
+                if(savingAnimation2.isRunning())
+                {
+                    cont ++;
+                    txt.setText(as + cont);
+                    savingAnimation2.stop();
+                    girar();
+                }
+                else
+                mp.start();
+
                 break;
             case R.id.ib3_animation:
-                savingAnimation3.stop();
-                girar();
+                if(savingAnimation3.isRunning() )
+                {
+                    cont ++;
+                    txt.setText(as + cont);
+                    savingAnimation3.stop();
+                    girar();
+                }
+                else
+                mp.start();
+
                 break;
             case R.id.ib4_animation:
-                savingAnimation4.stop();
-                girar();
+                if(savingAnimation4.isRunning())
+                {
+                    cont ++;
+                    txt.setText(as + cont);
+                    savingAnimation4.stop();
+                    girar();
+                }
+                else
+                mp.start();
+
                 break;
         }
     }
