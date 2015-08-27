@@ -109,7 +109,7 @@ public class coloresjuego extends AppCompatActivity implements View.OnClickListe
             case 4:
 
                     savingAnimation4.start();
-                    rl.setBackgroundColor(Color.parseColor("#FFFFFA3B"));
+                    rl.setBackgroundColor(Color.parseColor("#FFABA90E"));
 
                 break;
 

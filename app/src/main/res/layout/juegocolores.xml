@@ -17,7 +17,7 @@
         android:id="@+id/btn_iniciar_animacion"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:background="@drawable/play"
+        android:background="@drawable/player_play"
         android:layout_marginTop="110dp"
         android:layout_alignTop="@+id/ib1_animacion"
         android:layout_centerHorizontal="true" />
