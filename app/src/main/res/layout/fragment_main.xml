@@ -12,20 +12,34 @@
         android:id="@+id/textView" />
 
     <Button
-        android:layout_width="130dp"
+        android:layout_width="150dp"
         android:layout_height="60dp"
         android:id="@+id/btn1a3"
+        android:background="@drawable/botones1"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="75dp"
-        android:background="@drawable/btn1" />
+        android:layout_marginTop="123dp" />
 
     <Button
-        android:layout_width="130dp"
+        android:layout_width="150dp"
         android:layout_height="60dp"
         android:id="@+id/btn3a6"
+        android:background="@drawable/boton2"
         android:layout_below="@+id/btn1a3"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/btn1" />
+        android:layout_alignLeft="@+id/btn1a3"
+        android:layout_alignStart="@+id/btn1a3"
+        android:layout_marginTop="51dp" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:id="@+id/btnAcerca"
+        android:background="@drawable/acercade"
+        android:padding="50dp"
+        android:paddingTop="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/btn3a6"
+        android:layout_alignStart="@+id/btn3a6"
+        android:layout_marginBottom="53dp" />
 
 </RelativeLayout>

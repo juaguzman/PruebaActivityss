@@ -27,7 +27,6 @@ public class juegoanimales extends AppCompatActivity implements OnClickListener
         mp=MediaPlayer.create(this,R.raw.ranita);
         mp1=MediaPlayer.create(this,R.raw.clasica);
         mp1.setLooping(true);
-        mp1.setVolume(2, 2);
         mp1.start();
 
         leon.setOnClickListener(this);
@@ -69,13 +68,21 @@ public class juegoanimales extends AppCompatActivity implements OnClickListener
 
 
     @Override
-    public void onClick(View v) {
+    public void onClick(View v)
+    {
+        if(mp1.isPlaying())
+        {
+            mp1.stop();
+        }
+
+
         switch (v.getId())
         {
             case R.id.ivLeon:
                 if(mp.isPlaying())
                 {
                     mp.stop();
+                    mp.release();
                 }
                 visor.setImageResource(R.drawable.leonfin);
                 mp = MediaPlayer.create(this,R.raw.leon);
@@ -87,6 +94,7 @@ public class juegoanimales extends AppCompatActivity implements OnClickListener
                 if(mp.isPlaying())
                 {
                     mp.stop();
+                    mp.release();
                 }
                 visor.setImageResource(R.drawable.perrofin);
                 mp = MediaPlayer.create(this,R.raw.perro);
@@ -97,6 +105,7 @@ public class juegoanimales extends AppCompatActivity implements OnClickListener
                 if(mp.isPlaying())
                 {
                     mp.stop();
+                    mp.release();
                 }
                 visor.setImageResource(R.drawable.ranafim);
                 mp = MediaPlayer.create(this,R.raw.ranita);
@@ -107,6 +116,7 @@ public class juegoanimales extends AppCompatActivity implements OnClickListener
                 if(mp.isPlaying())
                 {
                     mp.stop();
+                    mp.release();
                 }
                 visor.setImageResource(R.drawable.patofin);
                 mp = MediaPlayer.create(this,R.raw.pato);
@@ -117,6 +127,7 @@ public class juegoanimales extends AppCompatActivity implements OnClickListener
                 if(mp.isPlaying())
                 {
                     mp.stop();
+                    mp.release();
                 }
                 visor.setImageResource(R.drawable.monofin);
                 mp = MediaPlayer.create(this,R.raw.mono);
@@ -127,6 +138,7 @@ public class juegoanimales extends AppCompatActivity implements OnClickListener
                 if(mp.isPlaying())
                 {
                     mp.stop();
+                    mp.release();
                 }
                 visor.setImageResource(R.drawable.osofin);
                 mp = MediaPlayer.create(this,R.raw.oso);
