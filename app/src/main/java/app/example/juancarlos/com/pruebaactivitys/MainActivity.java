@@ -19,9 +19,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btn = (Button) findViewById(R.id.btnAdelnte);
+        btn = (Button) findViewById(R.id.btn1a3);
         btn.setOnClickListener(this);
-        btn2 = (Button) findViewById(R.id.btnSigue);
+        btn2 = (Button) findViewById(R.id.btn3a6);
         btn2.setOnClickListener(this);
         mp = MediaPlayer.create(this, R.raw.pinpong);
         mp.start();
@@ -79,12 +79,12 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
     {
         switch (v.getId())
         {
-            case R.id.btnAdelnte:
-
-                break;
-            case R.id.btnSigue:
+            case R.id.btn1a3:
                 Intent in = new Intent(MainActivity.this, activityP2.class);
                 startActivity(in);
+                break;
+            case R.id.btn3a6:
+
                 break;
 
         }

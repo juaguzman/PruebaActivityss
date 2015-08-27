@@ -8,9 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 
-/**
- * Created by JUANCARLOS on 26/08/2015.
- */
+
 public class activityP2  extends AppCompatActivity implements View.OnClickListener
 {
     Button btn1;
@@ -20,11 +18,11 @@ public class activityP2  extends AppCompatActivity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.prueba2);
-        btn1 = (Button) findViewById(R.id.btnJuego);
+        btn1 = (Button) findViewById(R.id.btnJuegAnm);
         btn1.setOnClickListener(this);
 
-        btn1 = (Button) findViewById(R.id.btnColores);
-        btn1.setOnClickListener(this);
+        btn2 = (Button) findViewById(R.id.btnJuegFam);
+        btn2.setOnClickListener(this);
     }
 
 
@@ -33,12 +31,12 @@ public class activityP2  extends AppCompatActivity implements View.OnClickListen
     {
         switch (v.getId())
         {
-            case R.id.btnJuego:
+            case R.id.btnJuegAnm:
                 Intent in1 = new Intent(activityP2.this,juegoanimales.class);
                 startActivity(in1);
                 break;
-            case R.id.btnColores:
-                Intent in2 = new Intent(activityP2.this,coloresjuego.class);
+            case R.id.btnJuegFam:
+                Intent in2 = new Intent(activityP2.this,juegofam.class);
                 startActivity(in2);
         }
 
