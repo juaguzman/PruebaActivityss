@@ -14,10 +14,14 @@ public class acercade extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.acerca);
 
+
+        tx = (TextView) findViewById(R.id.txt_AcercaDe);
         String font_path = "font/timkid.ttf";
-        Typeface TF = Typeface.createFromAsset(getAssets(), font_path);
-        tx = (TextView) findViewById(R.id.txtAcierto);
-        tx.setTypeface(TF);
+        Typeface tf = Typeface.createFromAsset(getAssets(), font_path);
+        tx.setTypeface(tf);
+        //Typeface TF = Typeface.createFromAsset(getAssets(), font_path);
+
+        //tx.setTypeface(TF);
 
 
     }
