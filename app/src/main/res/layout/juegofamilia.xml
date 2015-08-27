@@ -15,15 +15,6 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="59dp"
-        android:id="@+id/btnatrfm"
-        android:background="@drawable/flecha"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/imageView2"
-        android:layout_toStartOf="@+id/imageView2" />
-
     <ImageView
             android:layout_width="200dp"
             android:layout_height="150dp"
@@ -47,9 +38,9 @@
         android:layout_gravity="center_horizontal"
         android:scrollbars="none"
         android:id="@+id/horizontalScrollView"
-        android:layout_above="@+id/btnatrfm"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp">
+        android:layout_below="@+id/ivVisor"
+        android:layout_alignLeft="@+id/ivVisor"
+        android:layout_alignStart="@+id/ivVisor">
 
         <LinearLayout
             android:layout_width="fill_parent"

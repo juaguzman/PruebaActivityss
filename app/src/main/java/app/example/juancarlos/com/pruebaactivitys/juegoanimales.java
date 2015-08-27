@@ -1,8 +1,10 @@
 package app.example.juancarlos.com.pruebaactivitys;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.content.DialogInterface;
 import android.view.View.OnClickListener;
@@ -13,6 +15,7 @@ public class juegoanimales extends AppCompatActivity implements OnClickListener
 {
     ImageView visor, leon, perro, rana,pato, mono, oso;
     MediaPlayer mp,mp1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +38,7 @@ public class juegoanimales extends AppCompatActivity implements OnClickListener
         pato.setOnClickListener(this);
         mono.setOnClickListener(this);
         oso.setOnClickListener(this);
+
 
     }
 
@@ -145,6 +149,7 @@ public class juegoanimales extends AppCompatActivity implements OnClickListener
                 mp.setLooping(true);
                 mp.start();
                 break;
+
 
         }
 

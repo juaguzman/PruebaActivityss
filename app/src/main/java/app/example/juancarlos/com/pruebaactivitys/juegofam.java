@@ -14,7 +14,7 @@ import android.view.View;
 public class juegofam extends AppCompatActivity  implements OnClickListener{
     ImageView visor, papa, mama, nino,bebe;
     ImageButton ayuda;
-    Button btn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,14 +25,14 @@ public class juegofam extends AppCompatActivity  implements OnClickListener{
         nino=(ImageView)findViewById(R.id.ivNino);
         bebe=(ImageView)findViewById(R.id.ivBebe);
         ayuda=(ImageButton)findViewById(R.id.ibtnayuda);
-        btn = (Button)findViewById(R.id.btnatrfm);
+
 
         papa.setOnClickListener(this);
         mama.setOnClickListener(this);
         nino.setOnClickListener(this);
         bebe.setOnClickListener(this);
         ayuda.setOnClickListener(this);
-        btn.setOnClickListener(this);
+
 
 
 
@@ -58,10 +58,6 @@ public class juegofam extends AppCompatActivity  implements OnClickListener{
             case R.id.ibtnayuda:
                 Intent in = new Intent(juegofam.this,inst1.class);
                 startActivity(in);
-            case R.id.btnatrfm:
-                finish();
-                Intent in1 = new Intent(juegofam.this,activityP2.class);
-                startActivity(in1);
 
         }
 

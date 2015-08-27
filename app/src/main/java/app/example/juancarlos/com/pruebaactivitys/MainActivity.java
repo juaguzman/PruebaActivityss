@@ -83,13 +83,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
         switch (v.getId())
         {
             case R.id.btn1a3:
-
-                finish();
                 Intent in = new Intent(MainActivity.this, activityP2.class);
                 startActivity(in);
                 break;
             case R.id.btn3a6:
-                finish();
                 Intent in2 = new Intent(MainActivity.this, menu3a6.class);
                 startActivity(in2);
                 break;

@@ -12,7 +12,8 @@ import android.widget.Button;
 public class activityP2  extends AppCompatActivity implements View.OnClickListener
 {
     Button btn1;
-    Button btn2,btn3;
+    Button btn2;
+
 
 
     @Override
@@ -28,8 +29,7 @@ public class activityP2  extends AppCompatActivity implements View.OnClickListen
         btn2.setBackgroundResource(R.drawable.familiaanim);
         btn2.setOnClickListener(this);
 
-        btn3 = (Button)findViewById(R.id.btnatras);
-        btn3.setOnClickListener(this);
+
     }
 
     public void pasarGarbageCollector(){
@@ -46,20 +46,17 @@ public class activityP2  extends AppCompatActivity implements View.OnClickListen
         switch (v.getId())
         {
             case R.id.btnJuegAnm:
-                finish();
                 pasarGarbageCollector();
                 Intent in1 = new Intent(activityP2.this,juegoanimales.class);
                 startActivity(in1);
                 break;
             case R.id.btnJuegFam:
-                finish();
                 Intent in2 = new Intent(activityP2.this,juegofam.class);
                 startActivity(in2);
-            case R.id.btnatras:
-                finish();
-                Intent in3 = new Intent(activityP2.this,MainActivity.class);
-                startActivity(in3);
                 break;
+
+
+
         }
 
     }
