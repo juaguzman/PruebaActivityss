@@ -1,20 +1,19 @@
 package app.example.juancarlos.com.pruebaactivitys;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Button;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.content.DialogInterface;
-import android.view.View.OnClickListener;
-import android.view.View;
 
 
 public class juegofam extends AppCompatActivity  implements OnClickListener{
     ImageView visor, papa, mama, nino,bebe;
     ImageButton ayuda;
-
+    MediaPlayer mp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +24,7 @@ public class juegofam extends AppCompatActivity  implements OnClickListener{
         nino=(ImageView)findViewById(R.id.ivNino);
         bebe=(ImageView)findViewById(R.id.ivBebe);
         ayuda=(ImageButton)findViewById(R.id.ibtnayuda);
+        mp = MediaPlayer.create(this, R.raw.ranita);
 
 
         papa.setOnClickListener(this);
@@ -39,12 +39,36 @@ public class juegofam extends AppCompatActivity  implements OnClickListener{
     }
 
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mp.isPlaying()) {
+            mp.stop();
+            mp.release();
+
+        }
+    }
+
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mp.pause();
+
+    }
+
+
+
+    @Override
     public void onClick(View v)
     {
         switch (v.getId())
         {
             case R.id.ivPapa:
                 visor.setImageResource(R.drawable.papafondo);
+                mp = MediaPlayer.create(this, R.raw.papa);
+                mp.setLooping(true);
+                mp.setVolume(100, 100);
+                mp.start();
                 break;
             case R.id.ivMama:
                 visor.setImageResource(R.drawable.mamafondo);
